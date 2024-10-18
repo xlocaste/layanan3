@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbin’s Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMC31xC4B2T0gY4hG6EJ1f9YbJ5G59GpR7vvG" crossorigin="anonymous">
+    <style>
+        .scroll-container {
+            scroll-behavior: smooth; /* Agar scrolling terasa halus */
+        }
+    </style>
+
+</head>
+<body class="bg-gray-50 max-w-screen-2xl mx-auto">
+
+    <!-- Navbar -->
+    <nav class="p-5 bg-white shadow md:flex md:items-center md:justify-between md:pl-28">
+        <div class="flex justify-between items-center">
+            <span class="text-2xl cursor-pointer">
+                <img src="Produk/Rectangle 1.png" alt="">
+            </span>
+
+            <div class="sm:hidden">
+                <button 
+                    onclick="Menu(this)" 
+                    class="text-teal-800 hover:text-teal-900 focus:outline-none">
+                    <!-- Icon for Hamburger Menu -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul class="md:flex md:items-center z-50 md:z-auto md:static justify-end bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 absolute">
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="services-button" data-action="show" class="text-xl duration-500">Services</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="aboutus-button" data-action="show" class="text-xl duration-500">About Us</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="dev-button" data-action="show" class="text-xl duration-500">Dev</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="pricing-button" data-action="show" class="text-xl duration-500">Pricing</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="works-button" data-action="show" class="text-xl duration-500">Works</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <a id="programs-button" data-action="show" class="text-xl duration-500">Programs</a>
+            </li>
+            <li class="mx-4 my-6 md:my-0 text-right">
+                <button id="book-demo-button" class="bg-black text-white duration-500 md:px-6 px-2 py-2 mx-2 hover:bg-gray-800 rounded">Book a Demo</button>
+            </li>
+        </ul>
+        
+    </nav>
+    
+    <main>
+
+
+        <!-- HERO -->
+        <div class="flex flex-col md:flex-row justify-between bg-white rounded-lg">
+            <div class="w-full md:w-1/2 flex flex-col justify-center p-2 md:p-28">
+                <h2 class="text-4xl md:text-8xl font-bold text-red-100 text-left">
+                    # 
+                    <a href="#" class="font-light underline text-base text-gray-500">Service - Products</a>
+                </h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-teal-700 text-left">
+                    From 
+                    <a class="text-red-500">Issues</a> to 
+                    <a class="text-blue-500">Solution</a>,
+                </h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-teal-700 text-left">Create better business flow</h2>
+                <p class="text-gray-600 text-left mt-2">Our apps and tech management software is a powerful all-in-one solution to onboard, roster, manage, and pay your employees.</p>
+                <button class="flex justify-center items-center rounded bg-blue-700 px-4 py-2 text-white mt-4 w-full md:w-44">
+                    Consult With Us
+                </button>
+            </div>
+            <div class="flex items-center justify-center relative pt-10 md:pt-28 pr-0 md:pr-20 mt-4 md:mt-0">
+                <img src="Produk/Vector1.png" alt="Descriptive Alt Text" class="absolute right-0 top-0 object-cover h-full w-full" style="z-index: 0; width: 75%; height: auto;">
+                <img src="Produk/Vector.png" alt="Descriptive Alt Text" class="relative object-cover h-full rounded-lg" style="z-index: 1; width: 80%; height: auto;">
+            </div>                               
+        </div>
+    
+        <!-- CLIENT AND PARTNERS -->
+        <div class="pt-40 pb-20 bg-white">
+             <h2 class="text-3xl font-bold text-center mb-8 text-teal-700">Clients & Partners</h2>
+             <p class="text-gray-600 text-center mb-4 p-8">
+                 We believe that creating a thriving ecosystem requires teamwork. <br>
+                 When we grow together, every component of this ecosystem can accomplish even greater things.
+             </p>
+             <div class="relative p-10">
+                <!-- Tombol Panah Kiri -->
+                <button id="scroll-left" class="absolute ml-2 md:ml-20 left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+            
+                <div class="flex overflow-hidden scroll-container w-full justify-center">
+                    <div class="flex overflow-x-auto space-x-4 md:space-x-10 p-4" id="logo-container">
+                        <!-- Logo 1 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo.png" alt="Client 1" />
+                        </div>
+                        <!-- Logo 2 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo1.png" alt="Client 2" />
+                        </div>
+                        <!-- Logo 3 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo2.png" alt="Client 3" />
+                        </div>
+                        <!-- Logo 4 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo3.png" alt="Client 4" />
+                        </div>
+                        <!-- Logo 5 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo4.png" alt="Client 5" />
+                        </div>
+                        <!-- Logo 6 -->
+                        <div class="flex-shrink-0 w-32 h-32 rounded-lg flex items-center justify-center bg-white">
+                            <img src="Produk/Logo5.png" alt="Client 6" />
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Tombol Panah Kanan -->
+                <button id="scroll-right" class="absolute mr-2 md:mr-20 right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>            
+        </div>
+    
+        <!-- TENTANG KAMI -->
+        <div class="bg-white p-2 md:p-4">
+            <div class="flex flex-col md:flex-row justify-between bg-blue-50 py-8 rounded">
+                <div class="p-4 w-full md:w-1/2 flex items-center md:pl-32">
+                    <div class="w-full">
+                        <h2 class="text-3xl mb-4  text-teal-700">
+                            Trust Turbin to <a href="" class="text-blue-500">Boost</a> Your Business to New Heights
+                        </h2>
+                        <p class="text-gray-600">We reached here with our hard work and dedication</p>
+                    </div>
+                </div>
+                <div class="p-4 w-full md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Item 1 -->
+                        <div class="flex items-center">
+                            <img src="Produk/Icon.png" alt="Logo 1" class="w-8 h-8 mr-2">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-1 text-blue-700">37++</h2>
+                                <p class="text-gray-600">Teams</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex items-center">
+                            <img src="Produk/Icon3.png" alt="Logo 2" class="w-8 h-8 mr-2">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-1 text-blue-700">40++</h2>
+                                <p class="text-gray-600">Partners</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="flex items-center">
+                            <img src="Produk/Icon2.png" alt="Logo 3" class="w-8 h-8 mr-2">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-1 text-blue-700">120++</h2>
+                                <p class="text-gray-600">Finished Projects</p>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="flex items-center">
+                            <img src="Produk/Icon1.png" alt="Logo 4" class="w-8 h-8 mr-2">
+                            <div>
+                                <h2 class="text-2xl font-bold mb-1 text-blue-700">100++</h2>
+                                <p class="text-gray-600">Clients</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Turbin Product -->
+        <div class="bg-white md:px-12 lg:px-28 p-2 md:p-12"> 
+            <div class="bg-white rounded-lg pt-16 p-4 w-full md:w-4/6 flex flex-col md:flex-row items-center"> 
+                <div class="w-full"> 
+                    <h2 class="text-3xl md:text-4xl mb-4 text-black">Turbin’s Product makes it easy to 
+                        <a href="#" class="text-blue-500">on</a>track, 
+                        <a href="#" class="text-blue-500">boost</a> and 
+                        <a href="#" class="text-blue-500">support</a> your core business.
+                    </h2>
+                    <a href="#" class="text-gray-500">Click & Check it now →</a>
+                </div>
+            </div>
+            <div class="bg-white mt-6">
+                <div class="flex flex-col md:flex-row mb-4">
+                    <div class="w-full md:w-1/2 p-4 relative">
+                        <div class="flex justify-between items-center py-2 rounded bg-blue-50 border-b-4 border-blue-500 mb-10">
+                            <div class="flex items-center">
+                                <img src="Produk/Rectangle 84.png" alt="Logo" class="ml-2">
+                                <h2 class="text-2xl text-teal-700 ml-2">SUPPLIABLE</h2>
+                            </div>
+                            <h2 class="text-2xl text-red-500 ml-auto mr-2">→</h2>
+                        </div>
+                        <p class="text-justify text-lg text-gray-600 mb-10 leading-relaxed">Perangkat lunak yang membantu bisnis mengelola persediaan barang dengan mudah, mencatat transaksi masuk dan keluar, serta mengelola harga dan faktur untuk penjualan, pembelian, dan pajak.</p>
+                        <div class="flex items-start mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white bg-green-400 rounded-full mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p class="text-gray-600 text-lg">Proses pembukuan yang terbantu oleh automasi</p>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white bg-green-400 rounded-full mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p class="text-gray-600 text-lg">Pengelolaan inventaris dan stok barang secara menyeluruh</p>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white bg-green-400 rounded-full mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p class="text-gray-600 text-lg">Analisa performa melalui laporan yang bersifat real time</p>
+                        </div>                        
+                        <div class="flex items-start py-12">
+                            <p class="text-gray-400 text-lg"><a href="#" class="text-red-500">*</a>Book a demo to discuss more about your needs</p>
+                        </div>
+                        <div class="flex justify-between items-center py-2 rounded bg-gray-50 border-[1px] border-gray-300 mb-2">
+                            <div class="flex items-center">
+                                <img src="Produk/Rectangle 84.png" alt="Logo" class="ml-2">
+                                <h2 class="text-2xl text-teal-700 ml-2">SUPPLIABLE</h2>
+                            </div>
+                            <h2 class="text-2xl text-red-500 ml-auto mr-2">→</h2>
+                        </div>
+                        <div class="flex justify-between items-center py-2 rounded bg-gray-50 border-gray-300 mb-2">
+                            <div class="flex items-center">
+                                <img src="Produk/Rectangle 84.png" alt="Logo" class="ml-2">
+                                <h2 class="text-2xl text-teal-700 ml-2">SUPPLIABLE</h2>
+                            </div>
+                            <h2 class="text-2xl text-red-500 ml-auto mr-2">→</h2>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 p-4 flex flex-col items-center">
+                        <img src="Produk/image 10.png" alt="SUPPLIABLE" class="w-full h-auto mb-4"/>
+                        <button class="flex justify-center items-center rounded-lg bg-black px-6 py-2 text-white">
+                            Book a Demo
+                        </button>
+                    </div>
+                </div>                
+            </div>
+        </div>
+        
+        <!-- Request Demo -->
+        <div class="flex flex-col md:flex-row justify-between bg-white p-4">
+            <!-- Form Contact Us -->
+            <div class="shadow rounded-lg p-6 bg-blue-50 mr-0 md:mr-4 w-full md:w-4/6">
+                <div class="p-4">
+                    <div class="mb-6">
+                        <p class="text-teal-700 text-left text-sm">See what we could do for you</p>
+                        <h2 class="text-3xl mb-4 text-teal-700 text-left">Turbin helps you to save your time & money.<br>
+                            Get a <a href="#" class="text-red-500">FREE</a> demo!</h2>
+                    </div>
+                    <form>
+                        <div class="flex flex-col md:flex-row justify-between mb-3">
+                            <div class="w-full md:w-1/2 md:pr-2">
+                                <label for="first-name" class="block text-gray-700 text-lg mb-1">First Name<a href="#" class="text-red-500">*</a></label>
+                                <input type="text" id="first-name" placeholder="First Name" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                            </div>
+                            <div class="w-full md:w-1/2 md:pl-2">
+                                <label for="last-name" class="block text-gray-700 text-lg mb-1">Last Name<a href="#" class="text-red-500">*</a></label>
+                                <input type="text" id="last-name" placeholder="Last Name" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="block text-gray-700 text-lg mb-1">Email<a href="#" class="text-red-500">*</a></label>
+                            <input type="email" id="email" placeholder="Your Email" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between mb-3">
+                            <div class="w-full md:w-1/2 md:pr-2">
+                                <label for="phone-number" class="block text-gray-700 text-lg mb-1">Phone Number<a href="#" class="text-red-500">*</a></label>
+                                <input type="text" id="phone-number" placeholder="62xxxx" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                            </div>
+                            <div class="w-full md:w-1/2 md:pl-2">
+                                <label for="location" class="block text-gray-700 text-lg mb-1">Location<a href="#" class="text-red-500">*</a></label>
+                                <input type="text" id="location" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row justify-between mb-12">
+                            <div class="w-full md:w-1/2 md:pr-2">
+                                <label for="company-size" class="block text-gray-700 text-lg mb-1">Company Size<a href="#" class="text-red-500">*</a></label>
+                                <select id="company-size" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg bg-white">
+                                    <option value="" disabled selected>1 - 50 people</option>
+                                    <option value="1-50">1 - 50 people</option>
+                                    <option value="51-100">51 - 100 people</option>
+                                    <option value="101-500">101 - 500 people</option>
+                                    <option value="501-1000">501 - 1000 people</option>
+                                    <option value="1000+">1000+ people</option>
+                                </select>
+                            </div>
+                            <div class="w-full md:w-1/2 md:pl-2">
+                                <label for="company-name" class="block text-gray-700 text-lg mb-1">Company Name<a href="#" class="text-red-500">*</a></label>
+                                <input type="text" id="company-name" placeholder="Company name" class="shadow appearance-none border rounded w-full py-1 px-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-lg" required>
+                            </div>
+                        </div>
+                        <div class="flex justify-center w-full">
+                            <button type="submit" class="w-full bg-black hover:bg-gray-500 text-white py-2 px-3 rounded focus:outline-none focus:shadow-outline text-lg">
+                                Request Demo
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="hidden md:flex w-full md:w-2/6 items-center justify-center mt-4 md:mt-0">
+                <img src="Produk/Group 2274.png" alt="Contact Us" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="bg-black">
+            <div class="md:flex md:justify-between text-white md:pl-36 p-20 px-4 pb-0">
+                <div class="md:w-2/4 md:pr-20">
+                    <img src="Produk/Rectangle 85.png" alt="Contact Us" class="w-36 h-auto mb-6">
+                    <p class="mb-3 leading-relaxed text-justify">Our expert financial consultants provide solutions to help you achieve financial wealth. Trust us to guide you toward a brighter financial future.</p>
+                </div>
+                <div class="md:w-1/4">
+                    <div>
+                        <h1 class="font-semibold text-2xl mb-6">Our Services</h1>
+                        <div class="flex flex-col">
+                            <a href="" class="mb-3">Developper</a>
+                            <a href="" class="mb-3">Works</a>
+                            <a href="" class="mb-3">Programs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/4">
+                    <div>
+                        <h1 class="font-semibold text-2xl mb-6">Explore More</h1>
+                        <div class="flex flex-col">
+                            <a href="" class="mb-3">About us</a>
+                            <a href="" class="mb-3">Blog</a>
+                            <a href="" class="mb-3">Site map</a>
+                            <a href="" class="mb-3">Privacy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="xl:flex xl:justify-between text-white md:pl-36 p-4 pt-0 w-2/4">
+                <div class="flex items-center mb-4">
+                    <img src="Produk/Linkedin.png" alt="Logo" class="w-5 h-auto">
+                    <a href="" class="text-lg text-white ml-2">TURBIN</a>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="Produk/Instagram.png" alt="Logo" class="w-5 h-auto">
+                    <a href="" class="text-lg text-white ml-2">turbin.id</a>
+                </div>
+                <div class="flex items-center mb-4">
+                    <img src="Produk/Email.png" alt="Logo" class="w-5 h-auto">
+                    <a href="" class="text-lg text-white ml-2">hi@turbin.id</a>
+                </div>
+            </div>
+            <div class="flex justify-center w-full border-t-2 border-gray-500 p-5">
+                <a href="" class="text-white">Copyright © 2024. All Rights Reserved</a>
+            </div>
+        </div>
+    </main>    
+    <script>
+        function Menu(e) {
+            let list = document.querySelector('ul');
+
+            e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'))
+            : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'));
+        }
+
+        document.getElementById('scroll-left').addEventListener('click', function() {
+            const container = document.getElementById('logo-container');
+            container.scrollBy({ left: -200, behavior: 'smooth' });
+        });
+
+        document.getElementById('scroll-right').addEventListener('click', function() {
+            const container = document.getElementById('logo-container');
+            container.scrollBy({ left: 200, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+
